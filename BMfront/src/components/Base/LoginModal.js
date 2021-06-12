@@ -19,7 +19,7 @@ function LoginModal(props) {
       password: password
     };
 
-    axios.post(`http://localhost:8000/AccApp/login/`, user)
+    axios.post(`http://localhost:8000/account/login/`, user)
     .then(res => {
       if (res.data.token) {
               localStorage.clear();

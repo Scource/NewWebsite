@@ -1,0 +1,33 @@
+version: "3.9"
+
+services:
+  postgres:
+    image: postgres:latest
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+  backend:
+    build:
+      dockerfile: Dockerfile.dev
+      context: ./BMsite/
+    volumes:
+      - ./BMsite:/backend
+    ports:
+      - "8000:8000"
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    depends_on:
+      - postgres
+
+  frontend:
+    build:
+      dockerfile: Dockerfile.dev
+      context: ./BMfront/
+    volumes:
+      - /frontend/node_modules
+      - ./BMfront:/frontend
+    ports:
+      - "3000:3000"
