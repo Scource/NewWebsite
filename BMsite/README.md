@@ -1,6 +1,10 @@
-##PREREQUISITES
+#NewWebsite
+Enhancement of TW_info_flow
 
-##SETUP 
+##PREREQUISITES
+* Docker and docker-compose
+* 
+###SETUP 
 The first thing to do is to clone the repository:
 
 ```
