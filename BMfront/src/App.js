@@ -17,9 +17,7 @@ function App() {
   const [loginState, setLoginState] = useState(false);
   const onButtonClick=(state) => {
     setModalState(state)}
-
-
-
+    console.log(localStorage)
   const LogOut = () => {
     localStorage.clear()
     setLoginState(false)
@@ -27,8 +25,6 @@ function App() {
   }
 
   
-
-
   return (
     <BrowserRouter>
         <Navbar bg="primary" variant="dark" expand="lg">

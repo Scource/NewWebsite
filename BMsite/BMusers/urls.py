@@ -3,7 +3,7 @@
 """
 
 from django.urls import path
-import BMusers.views as views
+from . import views
 
 
 app_name = 'BMusers'

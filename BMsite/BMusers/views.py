@@ -5,7 +5,6 @@ BMusers module using class based views and django REST API
 from rest_framework import generics
 from .models import Element, Connection, Powerplant, PowerPlantConnection
 from .serializers import ElementSerializer, ConnectionSerializer, PowerPlantSerializer, PowerPlantConnectionSerializer
-from django.http import JsonResponse
 #from rest_framework.permissions import IsAuthenticated
 
 

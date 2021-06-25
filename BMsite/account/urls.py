@@ -1,6 +1,6 @@
 from django.urls import path
 from rest_framework.authtoken.views import obtain_auth_token
-import account.views as views
+from . import views
 
 
 app_name = 'account'

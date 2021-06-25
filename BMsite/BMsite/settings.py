@@ -89,10 +89,11 @@ TEMPLATES = [
 WSGI_APPLICATION = 'BMsite.wsgi.application'
 
 
-# AUTHENTICATION_BACKENDS = (
-#     'django.contrib.auth.backends.ModelBackend', # this is default
-#     'guardian.backends.ObjectPermissionBackend',
-# )
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication',
+    ],
+}
 
 
 # Database
