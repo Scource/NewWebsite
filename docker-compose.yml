@@ -26,6 +26,9 @@ services:
       - postgres
 
   frontend:
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+    stdin_open: true
     build:
       dockerfile: Dockerfile.dev
       context: ./BMfront/

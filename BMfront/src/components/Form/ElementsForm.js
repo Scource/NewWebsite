@@ -48,7 +48,6 @@ return <Redirect to={`/element/${(newElement.element_type)==='0' ? 'POB' : 'SE'}
 
 return(
     <Container>
-    {/* /{redirect ? <Redirect to={`/element/${(newElement.element_type)==='0' ? 'POB' : 'SE'}/`} /> : null} */}
        <h3>Utwórz nowego użytkownika Rynku Bilansującego</h3>
        <br/>
         <Form>
