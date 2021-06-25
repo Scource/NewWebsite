@@ -22,7 +22,7 @@ $ cd NewWebsite
 
 #### PostgresDB setup
 
-- Migrate data to new DB
+- Migrate tables to new DB
   `docker-compose exec backend python manage.py migrate`
 
 * Create first user in new DB
