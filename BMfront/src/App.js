@@ -17,7 +17,6 @@ function App() {
   const [loginState, setLoginState] = useState(false);
   const onButtonClick=(state) => {
     setModalState(state)}
-    console.log(localStorage)
   const LogOut = () => {
     localStorage.clear()
     setLoginState(false)

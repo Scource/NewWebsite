@@ -15,7 +15,6 @@ function ProdList(props) {
             <th>ID</th>
             <th>Nazwa</th>
             <th>PPE</th>
-            <th>POB</th>
             <th>Typ</th>
             <th>Data od</th>
             <th>Data do</th>
@@ -27,9 +26,9 @@ function ProdList(props) {
             <td>{pp.pk}</td>
             <td>{pp.name}</td>
             <td>{pp.PPE}</td>
-            <td>{pp.POB}</td>            
+       
             <td>{pp.element_type===0 ? "Wytwórca" 
-                : props.data.element_type ===1 ? "Mikroinstalacja" : "Prosument"}</td>
+                : pp.element_type ===1 ? "Mikroinstalacja" : "Prosument"}</td>
             <td>{moment(pp.dt_from).format('YYYY-MM-DD HH:mm')}</td>
             <td>{moment(pp.dt_to).format('YYYY-MM-DD HH:mm')}</td>
             <td style={{width: '80px'}}><Link to={`${props.match.url}/${pp.pk}/show`}><Button>Pokaż</Button></Link>
